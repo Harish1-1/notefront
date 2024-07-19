@@ -8,7 +8,11 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://noteback-m01l.onrender.com/register', { username, password });
+      const response = await axios.post('https://noteback-m01l.onrender.com/register', { username, password }, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
         alert('Registration successful');

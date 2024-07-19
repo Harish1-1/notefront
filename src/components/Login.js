@@ -8,7 +8,11 @@ const Login = ({ setToken }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://noteback-m01l.onrender.com/login', { username, password });
+      const response = await axios.post('https://noteback-m01l.onrender.com/login', { username, password }, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
         setToken(response.data.token);

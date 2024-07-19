@@ -1,32 +1,94 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
 form {
-    margin: 20px;
-  }
-  
-  input, textarea {
-    display: block;
-    margin: 10px 0;
-  }
-  
-  button {
-    margin: 10px 0;
-  }
-  
-  nav {
-    margin-bottom: 20px;
-  }
-  
-  .note {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-  }
-  
-  .note-header {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .color-btn {
-    margin-right: 10px;
-  }
-  
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.note {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note-tags {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.note button {
+  background-color: #dc3545;
+  margin-left: 10px;
+}
+
+.note button:hover {
+  background-color: #c82333;
+}
+
+.color-btn {
+  margin-right: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.color-btn[data-color="#ffffff"] { background-color: #ffffff; }
+.color-btn[data-color="#ff0000"] { background-color: #ff0000; }
+.color-btn[data-color="#00ff00"] { background-color: #00ff00; }
+.color-btn[data-color="#0000ff"] { background-color: #0000ff; }
